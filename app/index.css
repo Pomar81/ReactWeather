@@ -32,20 +32,24 @@ html, body {
 }
 
 .cityForm h1 {
-  font-size: 40px;
+  font-family: "Segoe UI", Roboto, SansSerif;
+  font-size: 45px;
+  color: #ffffff;
+  font-weight: 200;
 }
 .cityForm input {
-  width: 80%;
-  font-size: 30px;
-  padding: 5px;
+  width: 70%;
+  font-size: 14px;
+  padding: 10px;
   margin-bottom: 26px;
   border-radius: 7px;
 }
 
 .cityForm button {
   padding: 10px;
-  font-size: 20px;
+  font-size: 14px;
+  color: #ffffff;
   border-radius: 7px;
-  background-color: #22dd00;
+  background-color: #4CAE4C;
   outline-color: darkgreen;
 }
