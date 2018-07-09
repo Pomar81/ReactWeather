@@ -1,5 +1,6 @@
 import React from "react";
-import SelectCity from "./SelectCity"
+import MainForm from "./MainForm";
+import Header from "./Header";
 
 class App extends React.Component {
   constructor (props) {
@@ -8,12 +9,12 @@ class App extends React.Component {
   render() {
     return (
         <React.Fragment>
-          <div className="header">
-            My header
-          </div>
-          <div className="main" >
-            <SelectCity/>
-          </div>
+          <header className="header">
+              <Header/>
+          </header>
+          <main className="main" >
+            <MainForm/>
+          </main>
         </React.Fragment>
     );
   }
