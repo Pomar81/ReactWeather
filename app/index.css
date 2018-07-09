@@ -2,9 +2,11 @@ html, body {
   height: 100%;
   min-height: 100%;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
 }
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
 #app {
   display: flex;
   flex-direction: column;
@@ -21,31 +23,44 @@ html, body {
   background-size: cover;
 }
 
-.header {
-  padding: 15px 5px;
+.headerForm {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  background: #FC6C43;
 }
 
-.cityForm {
+.mainForm {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
 
-.cityForm h1 {
-  font-family: "Segoe UI", Roboto, SansSerif;
+.header h2 {
+  margin: 0;
+  color: #fff;
+}
+.header .cityInput{
+  margin-left: auto;
+  margin-right: 10px;
+}
+.mainForm h1 {
   font-size: 45px;
   color: #ffffff;
   font-weight: 200;
 }
-.cityForm input {
-  width: 70%;
+.cityInput {
   font-size: 14px;
   padding: 10px;
-  margin-bottom: 26px;
   border-radius: 7px;
 }
 
-.cityForm button {
+.mainForm .cityInput{
+  margin-bottom: 26px;
+}
+
+.citySubmit {
   padding: 10px;
   font-size: 14px;
   color: #ffffff;
