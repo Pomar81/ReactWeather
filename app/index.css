@@ -13,7 +13,7 @@ body {
   height: 100%;
 }
 
-.main {
+.mainContainer {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
@@ -23,12 +23,18 @@ body {
   background-size: cover;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  background: #FC6C43;
+  padding: 15px;
+}
+
 .headerForm {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 15px;
-  background: #FC6C43;
+
 }
 
 .mainForm {
@@ -38,14 +44,14 @@ body {
 }
 
 .header h2 {
-  margin: 0;
+  margin: 0 auto 0 0;
   color: #fff;
 }
 .header .cityInput{
   margin-left: auto;
   margin-right: 10px;
 }
-.mainForm h1 {
+.mainContainer h1 {
   font-size: 45px;
   color: #ffffff;
   font-weight: 200;

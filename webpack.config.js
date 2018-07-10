@@ -5,7 +5,8 @@ module.exports = {
   entry: './app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index_bundle.js'
+    filename: 'index_bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -14,7 +15,10 @@ module.exports = {
       {test: /\.(jpe?g|png|gif|svg)$/i, loader: "file-loader?name=app/images/[name].[ext]"},
     ]
   },
-  mode: "development",
+    devServer: {
+    historyApiFallback: true
+    },
+    mode: "development",
   plugins: [
     new HtmlWebpackPlugin({
       template: 'app/index.html'
