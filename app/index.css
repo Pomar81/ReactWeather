@@ -74,3 +74,13 @@ body {
   background-color: #4CAE4C;
   outline-color: darkgreen;
 }
+
+.forecastTitle {
+    margin: 20px auto;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.forecastTitle.error {
+    color: red;
+}
