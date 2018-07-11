@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html, body {
   height: 100%;
   min-height: 100%;
@@ -19,15 +22,25 @@ body {
   flex: 1 0 auto;
   align-items: center;
   justify-content: center;
-  background: url("images/pattern.svg");
+  background: url("./images/pattern.svg");
   background-size: cover;
 }
 
+.mainForecast {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 0 auto;
+}
+
 .header {
-  display: flex;
-  flex-direction: row;
-  background: #FC6C43;
-  padding: 15px;
+    display: flex;
+    flex-direction: row;
+    background: #FC6C43;
+    flex: 0 0 60px;
+    align-items: center;
+    padding: 0 15px;
 }
 
 .headerForm {
@@ -84,3 +97,26 @@ body {
 .forecastTitle.error {
     color: red;
 }
+
+
+
+.forecastContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.dayContainer {
+    margin: 35px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-flow: column;
+}
+
+.weatherIcon {
+    flex: 1 0 auto;
+}
+

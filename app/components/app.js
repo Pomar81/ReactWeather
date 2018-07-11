@@ -17,6 +17,7 @@ class App extends React.Component {
                     <Switch>
                         <Route exact path="/" component={MainContainer}/>
                         <Route path="/forecast" component={Forecast}/>
+                        <Route path="/details" component={{}}/>
                         <Route render={()=><p>page is not found 404</p>}/>
                     </Switch>
                 </React.Fragment>
