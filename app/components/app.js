@@ -3,6 +3,7 @@ import MainContainer from "./MainContainer";
 import Header from "./Header";
 import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import Forecast from "./Forecast";
+import Details from "./Details";
 
 class App extends React.Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class App extends React.Component {
                     <Switch>
                         <Route exact path="/" component={MainContainer}/>
                         <Route path="/forecast" component={Forecast}/>
-                        <Route path="/details" component={{}}/>
+                        <Route path="/details" component={Details}/>
                         <Route render={()=><p>page is not found 404</p>}/>
                     </Switch>
                 </React.Fragment>

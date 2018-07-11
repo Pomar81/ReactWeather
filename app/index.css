@@ -116,7 +116,22 @@ body {
     flex-flow: column;
 }
 
+.dayContainer>p {
+    font-size: 20px;
+}
 .weatherIcon {
     flex: 1 0 auto;
 }
 
+.detailsContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 0 auto;
+    align-items: center;
+}
+
+.detailsContainer>p {
+    margin: 0 0 15px;
+    font-size: 30px;
+    color: gray;
+}

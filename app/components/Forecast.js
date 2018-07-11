@@ -1,19 +1,9 @@
 import React from "react";
 import queryString from "query-string";
 import api from "../utils/api";
+import DayWeather from "./DayWeather"
 
 
-function DayWeather(props) {
-    return (
-        <div className="dayContainer" onClick={props.onClick}>
-            <img src={`app/images/weather-icons/${props.day.weather[0].icon}.svg` } className="weatherIcon" alt={`${props.day.weather.description}`}/>
-            <p>
-                {
-                    new Intl.DateTimeFormat("en-us", {weekday: "long", month: "short", day: "numeric"})
-                        .format(Number(props.day.dt)*1000)}</p>
-        </div>
-    );
-}
 
 class Forecast extends React.Component {
     state = {
@@ -53,8 +43,7 @@ class Forecast extends React.Component {
     handleClick = (day) => {
         const city = this.state.weather.city.name;
         return ((evt) => {
-            console.log(city);
-            this.props.history.push(`details/${city}`);
+            this.props.history.push({pathname: `details/${city}`, state: day});
         });
     }
 
@@ -72,7 +61,6 @@ class Forecast extends React.Component {
         if (this.state.loading)
             return (<h1 className="forecastTitle">Loading</h1>);
         else if (this.state.error) {
-            {console.log("err")}
             return (<h1 className="forecastTitle">There is an error</h1>);
         }
         return (
